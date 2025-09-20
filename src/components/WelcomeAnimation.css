@@ -1,0 +1,57 @@
+.welcome-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f4f8; /* Light neutral background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.welcome-text {
+  font-size: 2.5rem; /* Base font size for larger screens */
+  font-weight: bold;
+  color: #1e3c72; /* Dark blue text */
+  text-align: center;
+  white-space: nowrap; /* Single line on large screens */
+  overflow: hidden;
+  padding: 0 1rem; /* Add padding for better spacing */
+}
+
+.cursor {
+  animation: blink 0.7s infinite;
+}
+
+@media (max-width: 1024px) {
+  .welcome-text {
+    font-size: 2.2rem; /* Slightly larger for tablets */
+    white-space: normal; /* Allow wrapping */
+    line-height: 1.5; /* Improved spacing between lines */
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-text {
+    font-size: 2rem; /* Larger for tablets */
+    white-space: normal; /* Allow wrapping */
+    line-height: 1.4; /* Better spacing between lines */
+    display: block; /* Ensure block-level for multi-line */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text {
+    font-size: 1.8rem; /* Larger for mobile */
+    white-space: normal; /* Allow wrapping */
+    line-height: 1.3; /* Tighter spacing for mobile */
+    display: block; /* Ensure block-level for multi-line */
+    padding: 0 0.5rem; /* Reduced padding for smaller screens */
+  }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

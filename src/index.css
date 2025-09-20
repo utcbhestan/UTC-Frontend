@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* UTC Tuition Classes Design System */
+@layer base {
+  :root {
+    /* Brand Colors - Deep Blue & Green Theme */
+    --utc-deep-blue: 210 100% 20%; /* #003366 */
+    --utc-soft-green: 120 55% 35%; /* #228B22 */
+    --utc-light-gray: 210 11% 96%; /* #F5F7FA */
+    --utc-dark-gray: 210 6% 56%; /* #8B949E */
+    
+    /* Light Mode Colors */
+    --background: 0 0% 100%;
+    --foreground: 210 100% 20%; /* Deep blue text */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 210 100% 20%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 100% 20%;
+    
+    --primary: 210 100% 20%; /* Deep blue */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 210 11% 96%; /* Light gray */
+    --secondary-foreground: 210 100% 20%;
+    
+    --success: 120 55% 35%; /* Soft green */
+    --success-foreground: 0 0% 100%;
+    
+    --muted: 210 11% 96%;
+    --muted-foreground: 210 6% 56%;
+    
+    --accent: 210 11% 96%;
+    --accent-foreground: 210 100% 20%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 100% 20%;
+    
+    --radius: 0.5rem;
+    
+    /* Educational gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(210 80% 30%));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(120 45% 45%));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 2px 10px hsl(var(--primary) / 0.05);
+    --shadow-button: 0 4px 15px hsl(var(--success) / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s ease-out;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode Colors - #121212 background, #E0E0E0 text */
+    --background: 0 0% 7%; /* #121212 */
+    --foreground: 0 0% 88%; /* #E0E0E0 */
+    
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 88%;
+    
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 88%;
+    
+    --primary: 210 100% 20%; /* Keep deep blue in dark mode */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 88%;
+    
+    --success: 120 55% 35%; /* Keep green in dark mode */
+    --success-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 88%;
+    
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 210 100% 20%;
+    
+    /* Dark mode gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(210 80% 30%));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(120 45% 45%));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    /* Dark shadows */
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 2px 10px hsl(0 0% 0% / 0.2);
+    --shadow-button: 0 4px 15px hsl(var(--success) / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    transition: var(--transition-smooth);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .hero-text-shadow {
+    text-shadow: 0 2px 10px hsl(0 0% 0% / 0.3);
+  }
+  
+  /* Button Variants */
+  .btn-success {
+    @apply bg-success text-success-foreground hover:opacity-90 shadow-[var(--shadow-button)] transition-all duration-200;
+  }
+  
+  .btn-hero {
+    @apply bg-white/10 text-white border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all duration-300;
+  }
+  
+  /* Card Styles */
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .card-hover {
+    transition: var(--transition-smooth);
+  }
+  
+  .card-hover:hover {
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-2px);
+  }
+  
+  /* Educational Theme Animations */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .stagger-delay-1 { animation-delay: 0.1s; }
+  .stagger-delay-2 { animation-delay: 0.2s; }
+  .stagger-delay-3 { animation-delay: 0.3s; }
+  .stagger-delay-4 { animation-delay: 0.4s; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
