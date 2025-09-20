@@ -1,73 +1,64 @@
-# Welcome to your Lovable project
+# UTC-Frontend
 
-## Project info
+## Overview
+UTC-Frontend is a web application built from scratch, designed to provide a robust and scalable front-end solution.
 
-**URL**: https://lovable.dev/projects/2a6c35aa-6f89-4d4d-bb3c-dae626ca5100
+## Project Information
+- **Repository URL**: [https://github.com/rohanmistry231/UTC-Frontend.git](https://github.com/rohanmistry231/UTC-Frontend.git)
 
-## How can I edit this code?
+## Technologies Used
+- **Vite**: Fast build tool for front-end development.
+- **TypeScript**: Static typing for JavaScript.
+- **React**: JavaScript library for UI development.
+- **shadcn-ui**: Accessible, customizable UI components.
+- **Tailwind CSS**: Utility-first CSS framework.
 
-There are several ways of editing your application.
+## Getting Started
+### Prerequisites
+- **Node.js & npm**: Install via [nvm](https://github.com/nvm-sh/nvm) or [Node.js](https://nodejs.org/).
 
-**Use Lovable**
+### Setup Instructions
+```bash
+# Clone the repository
+git clone https://github.com/rohanmistry231/UTC-Frontend.git
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2a6c35aa-6f89-4d4d-bb3c-dae626ca5100) and start prompting.
+# Navigate to the project directory
+cd UTC-Frontend
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+# Install dependencies
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Editing the Code
+### Using Your IDE
+- Clone the repo and open it in your preferred IDE.
+- Make changes, commit, and push to the repository.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Using GitHub
+- Navigate to a file in the [repository](https://github.com/rohanmistry231/UTC-Frontend).
+- Click the "Edit" button (pencil icon).
+- Commit changes directly.
 
-**Use GitHub Codespaces**
+### Using GitHub Codespaces
+- Go to the repository's main page.
+- Click the "Code" button and select "Codespaces."
+- Click "New codespace" to launch an environment.
+- Edit, commit, and push changes.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deployment
+- Configure deployment manually using a hosting platform (e.g., Vercel, Netlify).
+- Build the project: `npm run build`.
+- Deploy the output (usually in the `dist` folder) to your hosting service.
 
-## What technologies are used for this project?
+## Contributing
+1. Fork the repository.
+2. Create a branch: `git checkout -b feature-branch`.
+3. Commit changes: `git commit -m 'Add feature'`.
+4. Push: `git push origin feature-branch`.
+5. Create a Pull Request.
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2a6c35aa-6f89-4d4d-bb3c-dae626ca5100) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## License
+This project is licensed under the MIT License.
